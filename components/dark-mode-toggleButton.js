@@ -9,6 +9,7 @@ export default function DarkModeButton() {
   return (
     <button 
       className="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 
+      border border-gray-300
       hover:text-orange-500 
       dark:hover:text-yellow-300
       dark:text-slate-200

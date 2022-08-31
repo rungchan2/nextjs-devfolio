@@ -1,6 +1,4 @@
 import Image from "next/image"
-import { useTheme } from 'next-themes'
-
 
 export default function ProjectItem({data}) {
 
@@ -54,7 +52,7 @@ export default function ProjectItem({data}) {
 
         <a href={Link} >프로젝트 링크</a>
         
-        <div className="flex items-start mt-2">
+        <div className="flex flex-wrap items-start mt-2">
           {Tags.map(tags => (
             <h1 className="px-2 py-1 mr-2 rounded-md bg-sky-100 dark:bg-sky-700 w-30" key={tags.id}>{tags.name}</h1>
           ))}

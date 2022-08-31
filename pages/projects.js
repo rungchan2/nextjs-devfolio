@@ -2,8 +2,6 @@ import Layout from "../components/layout";
 import Head from 'next/head'
 import { TOKEN, DATABASE_ID } from "../config";
 import ProjectItem from "../components/projects/project-item"
-import { useTheme } from 'next-themes'
-
 
 
 
@@ -18,17 +16,19 @@ export default function projects({projects, projectIds}) {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <h1 className="text-4xl font-bold sm:text-6xl">
-              프로젝트 수 : 
-              <span className="pl-4 text-blue-500">{projectIds.length}</span>
-            </h1>
+            <div className="">
+              <h1 className="m-10 text-center text-5xl font-bold sm:text-5xl">
+                프로젝트 수 : 
+                <span className="pl-4 text-blue-500">{projectIds.length}</span>
+              </h1>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-8 mx-10">
-              {projects.results.map(aProject => 
-                <ProjectItem 
-                key={aProject.id}
-                data={aProject}/>
-              )}
+              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 3xl:grid-cols-5 gap-8 mx-2">
+                {projects.results.map(aProject => 
+                  <ProjectItem 
+                  key={aProject.id}
+                  data={aProject}/>
+                )}
+              </div>
             </div>
             
 
