@@ -1,11 +1,11 @@
 import Layout from "../components/layout";
-import Bookoint from "../components/bookPoint"
+import BookPoint from "../components/bookPoint"
 import CustomerVisit from "../components/customerVisit"
 import { TOKEN, DATABASE_ID_BOOKPOINT } from "../config/index"
 import Head from 'next/head'
 
 
-export default function Leinn({projectBookpoint}) {
+export default function LeinnBP({LeinnBP}) {
   return (
     <Layout >
         <Head>
@@ -17,8 +17,8 @@ export default function Leinn({projectBookpoint}) {
 
       <div className="flex flex-cols text-3xl grid gap-4 flex w-80">
           
-          {projectBookpoint.results.map(books => 
-            <Bookoint 
+          {LeinnBP.results && LeinnBP.results.map(books => 
+            <BookPoint 
               key={books.id}
               data={books}/>
           )}
@@ -56,9 +56,9 @@ export async function getStaticProps() {
     
   const res = await fetch(`https://api.notion.com/v1/databases/${DATABASE_ID_BOOKPOINT}/query`, options)
 
-  const projectBookpoint = await res.json()
+  const LeinnBP = await res.json()
 
   return {
-    props: {projectBookpoint }
+    props: {LeinnBP }
   }
 }
