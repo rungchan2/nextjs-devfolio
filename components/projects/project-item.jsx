@@ -2,6 +2,8 @@ import Image from "next/image"
 
 export default function ProjectItem({data}) {
 
+  const imageNoteFoundurl = "https://bitsofco.de/content/images/2018/12/Screenshot-2018-12-16-at-21.06.29.png"
+
   const name = data.properties.name.title[0].plain_text
   const Link = data.properties.Link.url
   const Description = data.properties.Description.rich_text[0].plain_text
@@ -9,7 +11,7 @@ export default function ProjectItem({data}) {
 
   const Workperiod_start = data.properties.Workperiod.date.start
   const Workperiod_end = data.properties.Workperiod.date.end 
-  const ImageSrc = data.cover.file?.url || data.cover.external.url
+  const ImageSrc = data.cover?.file?.url || data.cover?.external.url || imageNoteFoundurl 
 
   const calculateDate = (Workperiod_start, Workperiod_end) => {
 
@@ -50,7 +52,7 @@ export default function ProjectItem({data}) {
         <h1 className="text-2xl font-bold">{name}</h1>
         <h3 className="mt-3 text-xl">{Description}</h3>
 
-        <a href={Link} >프로젝트 링크</a>
+        <a target="_blank" rel="noreferrer" href={Link} >프로젝트 링크</a>
         
         <div className="flex flex-wrap items-start mt-2">
           {Tags.map(tags => (
@@ -58,13 +60,19 @@ export default function ProjectItem({data}) {
           ))}
         </div>
 
-        
-        <h1 className="my-1">작업기간 : {Workperiod_start} ~ {Workperiod_end},&nbsp;&nbsp;  
-        <span className="text-bold">({calculateDate(Workperiod_start, Workperiod_end)}일)</span>
-        </h1>
+        {/* 만약 끝나는 날짜가 있으면 */}
+        {typeof Workperiod_end === "string" && 
+          <h1 className="my-1">작업기간 : {Workperiod_start} ~ {Workperiod_end},&nbsp;&nbsp;  
+            <span className="text-bold">({calculateDate(Workperiod_start, Workperiod_end)}일)</span>
+          </h1>
+        }
 
-        {/* 만약에 끝나는 날짜가 없으면 <h1 if Workperiod_end >일자 : {Workperiod_start}</h1> */}
+        {/* 만약에 끝나는 날짜가 없으면 */}
+        {Workperiod_end === null && 
+          <h1>일자 : {Workperiod_start}</h1>
+        }
         
+            
       </div>
 
     </div>

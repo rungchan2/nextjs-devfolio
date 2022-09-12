@@ -8,7 +8,8 @@ const nextConfig = {
       'images.unsplash.com',
       's3.us-west-2.amazonaws.com',
       'dummyimage.com',
-      'www.imgacademy.com'
+      'www.imgacademy.com',
+      'bitsofco.de'
     ]
   }
 }
