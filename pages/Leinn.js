@@ -64,6 +64,8 @@ export async function getStaticProps() {
   const LeinnBP = await res.json()
 
   return {
-    props: {LeinnBP }
+    props: {LeinnBP}
   }
 }
+
+//비동기 함수 수정 해야 함 노션데이터 베이스 실시간 동기화 안됨.
