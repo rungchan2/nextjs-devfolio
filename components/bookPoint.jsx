@@ -7,8 +7,6 @@ export default function bookPoint({data}) {
   const readOrNot = data.properties.읽은책.checkbox
   const name = data.properties.책이름.title[0].plain_text
 
-
-  console.log(point)
   
   //console.log(result.map(a => ()))
 

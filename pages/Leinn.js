@@ -17,11 +17,10 @@ export default function Leinn({projectBookpoint}) {
 
       <div className="flex flex-cols text-3xl grid gap-4 flex w-80">
           
-          {projectBookpoint.results.map(projectBookpoint => 
+          {projectBookpoint.results.map(books => 
             <Bookoint 
-              className=""
-              key={projectBookpoint.id}
-              data={projectBookpoint}/>
+              key={books.id}
+              data={books}/>
           )}
           
       </div>
@@ -60,6 +59,6 @@ export async function getStaticProps() {
   const projectBookpoint = await res.json()
 
   return {
-    props: {projectBookpoint },
+    props: {projectBookpoint }
   }
 }
