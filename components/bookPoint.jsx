@@ -20,10 +20,11 @@ export default function bookPoint({data}) {
   return (
     <>
       <div className="border-4 border-gray-600 rounded-3xl">
-        <h1>점수 : {point}</h1>
-        <h1>주제 : {topic}</h1>
-        <h1>읽었는지? : {torf}</h1>
         <h1>책 이름 : {name}</h1>
+        <h1>주제 : {topic}</h1>
+        <h1>점수 : {point}</h1>
+        <h1>읽었는지? : {torf}</h1>
+        
         
       </div>
     </>

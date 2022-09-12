@@ -42,7 +42,7 @@ export default function aboutMe() {
                     <div className="flex-grow">
                       <h2 className="text-gray-900 text-lg title-font font-medium mb-3">Instagram</h2>
                       <p className="leading-relaxed text-base">Main : @leehc_09,<br/>Photograph : @anyway_record</p>
-                      <a className="mt-3 text-indigo-500 inline-flex items-center">Learn More
+                      <a href="https://www.instagram.com/leehc_09/" target="_blank" rel="noreferrer" className="mt-3 text-indigo-500 inline-flex items-center">@leehc_09
                         <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 ml-2" viewBox="0 0 24 24">
                           <path d="M5 12h14M12 5l7 7-7 7"></path>
                         </svg>
@@ -60,7 +60,7 @@ export default function aboutMe() {
                     <div className="flex-grow">
                       <h2 className="text-gray-900 text-lg title-font font-medium mb-3">Kakaotalk</h2>
                       <p className="leading-relaxed text-base">Kakaotalk Id : leeheecchan0907<br/> To Kakaotalk Profile :</p>
-                      <a className="mt-3 text-indigo-500 inline-flex items-center">Learn More
+                      <a href="https://open.kakao.com/o/swyQZcBe" target="_blank" rel="noreferrer" className="mt-3 text-indigo-500 inline-flex items-center">To Open Kakaotalk
                         <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 ml-2" viewBox="0 0 24 24">
                           <path d="M5 12h14M12 5l7 7-7 7"></path>
                         </svg>
@@ -77,7 +77,8 @@ export default function aboutMe() {
                     <div className="flex-grow">
                       <h2 className="text-gray-900 text-lg title-font font-medium mb-3">Tel.</h2>
                       <p className="leading-relaxed text-base">+82 10-2625-9706</p>
-                      <a className="mt-3 text-indigo-500 inline-flex items-center">Learn More
+                      <a href="tel:+82-10-2625-9706" target="_blank" rel="noreferrer" className="mt-3 text-indigo-500 inline-flex items-center">
+                        Make a Call
                         <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 ml-2" viewBox="0 0 24 24">
                           <path d="M5 12h14M12 5l7 7-7 7"></path>
                         </svg>
